@@ -28,13 +28,14 @@ import * as $$$$$$$$6 from "./sections/Footer.tsx";
 import * as $$$$$$$$7 from "./sections/Header.tsx";
 import * as $$$$$$$$8 from "./sections/Hero.tsx";
 import * as $$$$$$$$9 from "./sections/Highlights.tsx";
-import * as $$$$$$$$10 from "./sections/LinkTree.tsx";
-import * as $$$$$$$$11 from "./sections/MainSpeakers.tsx";
-import * as $$$$$$$$12 from "./sections/ProductDetails.tsx";
-import * as $$$$$$$$13 from "./sections/ProductShelf.tsx";
-import * as $$$$$$$$14 from "./sections/SearchResult.tsx";
-import * as $$$$$$$$15 from "./sections/WhatsApp.tsx";
-import * as $$$$$$$$16 from "./sections/WishlistGallery.tsx";
+import * as $$$$$$$$10 from "./sections/InstagramComponent.tsx";
+import * as $$$$$$$$11 from "./sections/LinkTree.tsx";
+import * as $$$$$$$$12 from "./sections/MainSpeakers.tsx";
+import * as $$$$$$$$13 from "./sections/ProductDetails.tsx";
+import * as $$$$$$$$14 from "./sections/ProductShelf.tsx";
+import * as $$$$$$$$15 from "./sections/SearchResult.tsx";
+import * as $$$$$$$$16 from "./sections/WhatsApp.tsx";
+import * as $$$$$$$$17 from "./sections/WishlistGallery.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -195,13 +196,14 @@ const manifest = {
     "deco-sites/vtexday/sections/Header.tsx": $$$$$$$$7,
     "deco-sites/vtexday/sections/Hero.tsx": $$$$$$$$8,
     "deco-sites/vtexday/sections/Highlights.tsx": $$$$$$$$9,
-    "deco-sites/vtexday/sections/LinkTree.tsx": $$$$$$$$10,
-    "deco-sites/vtexday/sections/MainSpeakers.tsx": $$$$$$$$11,
-    "deco-sites/vtexday/sections/ProductDetails.tsx": $$$$$$$$12,
-    "deco-sites/vtexday/sections/ProductShelf.tsx": $$$$$$$$13,
-    "deco-sites/vtexday/sections/SearchResult.tsx": $$$$$$$$14,
-    "deco-sites/vtexday/sections/WhatsApp.tsx": $$$$$$$$15,
-    "deco-sites/vtexday/sections/WishlistGallery.tsx": $$$$$$$$16,
+    "deco-sites/vtexday/sections/InstagramComponent.tsx": $$$$$$$$10,
+    "deco-sites/vtexday/sections/LinkTree.tsx": $$$$$$$$11,
+    "deco-sites/vtexday/sections/MainSpeakers.tsx": $$$$$$$$12,
+    "deco-sites/vtexday/sections/ProductDetails.tsx": $$$$$$$$13,
+    "deco-sites/vtexday/sections/ProductShelf.tsx": $$$$$$$$14,
+    "deco-sites/vtexday/sections/SearchResult.tsx": $$$$$$$$15,
+    "deco-sites/vtexday/sections/WhatsApp.tsx": $$$$$$$$16,
+    "deco-sites/vtexday/sections/WishlistGallery.tsx": $$$$$$$$17,
   },
   "loaders": {
     "$live/loaders/workflows/events.ts": i2$$$0,

@@ -101,6 +101,7 @@
               "deco-sites/vtexday/sections/Header.tsx",
               "deco-sites/vtexday/sections/Hero.tsx",
               "deco-sites/vtexday/sections/Highlights.tsx",
+              "deco-sites/vtexday/sections/InstagramComponent.tsx",
               "deco-sites/vtexday/sections/LinkTree.tsx",
               "deco-sites/vtexday/sections/MainSpeakers.tsx",
               "deco-sites/vtexday/sections/ProductDetails.tsx",
@@ -8437,6 +8438,45 @@
       ],
       "title": "deco-sites/vtexday/components/ui/Highlights.tsx@Props"
     },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0luc3RhZ3JhbUNvbXBvbmVudC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Título do componente",
+          "default": "Siga o VTEX DAY nas redes"
+        },
+        "minBanner": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Banner que acompanha o título"
+        },
+        "fields": {
+          "type": "array",
+          "items": {},
+          "title": "Campos a serem buscados na API",
+          "description": "Documentação se encontra aqui https://developers.facebook.com/docs/instagram-basic-display-api/reference/media/"
+        },
+        "numberOfPosts": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Quantos posts deseja buscar?",
+          "description": "Número de posts que vão ser retornados"
+        },
+        "token": {
+          "type": "string",
+          "title": "Token  do facebook",
+          "description": "Esse token é pego nas configurações do APP do facebook e expira a cada 90 dias"
+        }
+      },
+      "required": [
+        "title",
+        "minBanner",
+        "token"
+      ],
+      "title": "deco-sites/vtexday/sections/InstagramComponent.tsx@Props"
+    },
     "ZGVjby1zaXRlcy92dGV4ZGF5L2NvbXBvbmVudHMvdWkvTGlua1RyZWUudHN4@Link": {
       "type": "object",
       "properties": {
@@ -11298,6 +11338,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0luc3RhZ3JhbUNvbXBvbmVudC50c3g=": {
+      "title": "deco-sites/vtexday/sections/InstagramComponent.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0luc3RhZ3JhbUNvbXBvbmVudC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/vtexday/sections/InstagramComponent.tsx"
+          ],
+          "default": "deco-sites/vtexday/sections/InstagramComponent.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0xpbmtUcmVlLnRzeA==": {
       "title": "deco-sites/vtexday/sections/LinkTree.tsx",
       "type": "object",
@@ -12421,6 +12482,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0hpZ2hsaWdodHMudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0luc3RhZ3JhbUNvbXBvbmVudC50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0xpbmtUcmVlLnRzeA=="
