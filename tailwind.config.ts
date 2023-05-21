@@ -29,6 +29,23 @@ export default {
     container: {
       center: true,
     },
+    colors: {
+      "v-purple": "#2A063C",
+      "v-pink": "#ff005e",
+      "v-gray": "#494949",
+      "white": "#fff",
+      "v-gray-1": "#494c4f",
+    },
+    textColor: {
+      "v-purple": "#2A063C",
+      "v-pink": "#ff005e",
+      "v-gray": "#494949",
+      "v-gray-1": "#494c4f",
+      "white": "#fff",
+    },
+    fontFamily: {
+      sans: ["Roboto", "sans-serif"],
+    },
     extend: {
       animation: {
         "slide-left": "slide-left-frame 0.4s ease normal",

@@ -33,15 +33,33 @@ function MenuButton() {
   const { displayMenu } = useUI();
 
   return (
-    <Button
-      class="btn-square btn-ghost"
+    <button
+      class="p-2 bg-v-pink rounded-sm"
       aria-label="open menu"
       onClick={() => {
-        displayMenu.value = true;
+        displayMenu.value = !displayMenu.value;
       }}
     >
-      <Icon id="Bars3" width={20} height={20} strokeWidth={0.01} />
-    </Button>
+      {displayMenu.value
+        ? (
+          <Icon
+            id="XMark"
+            width={24}
+            height={24}
+            strokeWidth={3}
+            class="text-white"
+          />
+        )
+        : (
+          <Icon
+            id="Bars3"
+            width={24}
+            height={24}
+            strokeWidth={1}
+            class="text-white"
+          />
+        )}
+    </button>
   );
 }
 

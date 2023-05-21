@@ -1,37 +1,34 @@
-import Searchbar from "$store/islands/HeaderSearchbar.tsx";
+import Image from "deco-sites/std/components/Image.tsx";
 import Buttons from "$store/islands/HeaderButton.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import NavItem from "./NavItem.tsx";
 import { navbarHeight } from "./constants.ts";
 import type { INavItem } from "./NavItem.tsx";
-import type { Props as SearchbarProps } from "$store/components/search/Searchbar.tsx";
+import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
-function Navbar({ items, searchbar }: {
-  items: INavItem[];
-  searchbar: SearchbarProps;
-}) {
+function Navbar({ items, logo }: { items: INavItem[]; logo: LiveImage }) {
   return (
     <>
       {/* Mobile Version */}
       <div
         style={{ height: navbarHeight }}
-        class="md:hidden flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 gap-2"
+        class="md:hidden flex flex-row justify-between items-center border-b border-base-200 w-full px-3"
       >
-        <Buttons variant="menu" />
-
         <a
           href="/"
-          class="flex-grow inline-flex items-center"
+          class="flex-grow inline-flex items-center ml-auto justify-center"
           style={{ minHeight: navbarHeight }}
           aria-label="Store logo"
         >
-          <Icon id="Logo" width={126} height={16} />
+          <Image
+            // class="rounded-[40px]"
+            src={logo}
+            alt="VTEX DAY LOGO"
+            width={142}
+            height={61}
+          />
         </a>
-
-        <div class="flex gap-1">
-          <Buttons variant="search" />
-          <Buttons variant="cart" />
-        </div>
+        <Buttons variant="menu" />
       </div>
 
       {/* Desktop Version */}
@@ -43,30 +40,6 @@ function Navbar({ items, searchbar }: {
         </div>
         <div class="flex-auto flex justify-center">
           {items.map((item) => <NavItem item={item} />)}
-        </div>
-        <div class="flex-none w-44 flex items-center justify-end gap-2">
-          <Buttons variant="search" />
-          <Searchbar searchbar={searchbar} />
-          <a
-            class="btn btn-square btn-ghost"
-            href="/login"
-            aria-label="Log in"
-          >
-            <Icon id="User" width={20} height={20} strokeWidth={0.4} />
-          </a>
-          <a
-            class="btn btn-square btn-ghost"
-            href="/wishlist"
-            aria-label="Wishlist"
-          >
-            <Icon
-              id="Heart"
-              size={20}
-              strokeWidth={2}
-              fill="none"
-            />
-          </a>
-          <Buttons variant="cart" />
         </div>
       </div>
     </>
