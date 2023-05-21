@@ -20,6 +20,20 @@
     -moz-appearance: textfield;
     appearance: textfield;
   }
+
+  body::after {
+    content: "";
+    background-image: url(/overlay.png);
+    background-size: 100%;
+    position: absolute;
+    top: 15vw;
+    left: 0;
+    width: 100%;
+    height: 920vh !important;
+    z-index: 40;
+    pointer-events: none;
+    overflow: hidden;
+  }
 }
 
 @layer components {

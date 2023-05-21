@@ -39,7 +39,7 @@ function Header(
 ) {
   return (
     <>
-      <header style={{ height: navbarHeight }}>
+      <header style={{ height: navbarHeight }} class={`md:!h-auto`}>
         <div class="bg-base-100 fixed w-full z-50">
           <Navbar items={navItems} logo={logo} />
         </div>

@@ -31,7 +31,9 @@ export default {
     },
     colors: {
       "v-purple": "#2A063C",
+      "v-purple-1": "#311345",
       "v-pink": "#ff005e",
+      "v-pink-1": "#ff005d",
       "v-gray": "#494949",
       "white": "#fff",
       "v-gray-1": "#494c4f",
@@ -39,10 +41,12 @@ export default {
     },
     textColor: {
       "v-purple": "#2A063C",
+      "v-purple-1": "#311345",
       "v-pink": "#ff005e",
+      "v-pink-1": "#ff005d",
       "v-gray": "#494949",
-      "v-gray-1": "#494c4f",
       "white": "#fff",
+      "v-gray-1": "#494c4f",
       "transparent": "transparent",
     },
     fontFamily: {

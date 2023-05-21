@@ -99,6 +99,7 @@
               "deco-sites/vtexday/sections/Features.tsx",
               "deco-sites/vtexday/sections/Footer.tsx",
               "deco-sites/vtexday/sections/Header.tsx",
+              "deco-sites/vtexday/sections/Hero.tsx",
               "deco-sites/vtexday/sections/Highlights.tsx",
               "deco-sites/vtexday/sections/LinkTree.tsx",
               "deco-sites/vtexday/sections/ProductDetails.tsx",
@@ -7799,6 +7800,20 @@
       ],
       "title": "Miscellaneous"
     },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Font": {
+      "type": "object",
+      "properties": {
+        "fontFamily": {
+          "type": "string",
+          "default": "'Roboto'",
+          "title": "Font Family"
+        }
+      },
+      "required": [
+        "fontFamily"
+      ],
+      "title": "Font"
+    },
     "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -7809,6 +7824,10 @@
         "miscellaneous": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous",
           "title": "Miscellaneous"
+        },
+        "fonts": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Font",
+          "title": "Fonts"
         }
       },
       "required": [],
@@ -8315,6 +8334,55 @@
         "logo"
       ],
       "title": "deco-sites/vtexday/components/header/Header.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
+      "type": "string",
+      "format": "html",
+      "title": "HTML"
+    },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L2NvbXBvbmVudHMvdWkvSGVyby50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "imageBackground": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Imagem de background"
+        },
+        "title": {
+          "type": "string",
+          "title": "Titulo",
+          "default": " VTEX DAY"
+        },
+        "description": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
+          "title": "Descrição"
+        },
+        "location": {
+          "type": "string",
+          "title": "Local"
+        },
+        "horarios": {
+          "type": "string",
+          "title": "Horarios"
+        },
+        "labelButton": {
+          "type": "string",
+          "title": "Texto do botão de ação"
+        },
+        "actionButton": {
+          "type": "string",
+          "title": "Link do botão"
+        }
+      },
+      "required": [
+        "imageBackground",
+        "title",
+        "description",
+        "location",
+        "horarios",
+        "labelButton",
+        "actionButton"
+      ],
+      "title": "deco-sites/vtexday/components/ui/Hero.tsx@Props"
     },
     "ZGVjby1zaXRlcy92dGV4ZGF5L2NvbXBvbmVudHMvdWkvSGlnaGxpZ2h0cy50c3g=@Highlight": {
       "type": "object",
@@ -11114,6 +11182,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0hlcm8udHN4": {
+      "title": "deco-sites/vtexday/sections/Hero.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L2NvbXBvbmVudHMvdWkvSGVyby50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/vtexday/sections/Hero.tsx"
+          ],
+          "default": "deco-sites/vtexday/sections/Hero.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0hpZ2hsaWdodHMudHN4": {
       "title": "deco-sites/vtexday/sections/Highlights.tsx",
       "type": "object",
@@ -12231,6 +12320,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0hlYWRlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0hlcm8udHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0hpZ2hsaWdodHMudHN4"
