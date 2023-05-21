@@ -107,6 +107,7 @@
               "deco-sites/vtexday/sections/ProductDetails.tsx",
               "deco-sites/vtexday/sections/ProductShelf.tsx",
               "deco-sites/vtexday/sections/SearchResult.tsx",
+              "deco-sites/vtexday/sections/Speakers.tsx",
               "deco-sites/vtexday/sections/WhatsApp.tsx",
               "deco-sites/vtexday/sections/WishlistGallery.tsx",
               "$live/matchers/MatchAlways.ts",
@@ -8755,6 +8756,72 @@
       ],
       "title": "deco-sites/vtexday/components/search/SearchResult.tsx@Props"
     },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1NwZWFrZXJzLnRzeA==@Perfil": {
+      "type": "object",
+      "properties": {
+        "perfil": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Perfil"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "bio": {
+          "type": "string",
+          "title": "Bio"
+        },
+        "shortDescription": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Short Description"
+        }
+      },
+      "required": [
+        "perfil",
+        "name",
+        "bio"
+      ],
+      "title": "Perfil"
+    },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1NwZWFrZXJzLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "subtitle": {
+          "type": "string",
+          "title": "Subtitle"
+        },
+        "description": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
+          "title": "Description"
+        },
+        "text": {
+          "type": "string",
+          "title": "Text"
+        },
+        "speakers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1NwZWFrZXJzLnRzeA==@Perfil"
+          },
+          "title": "Speakers"
+        }
+      },
+      "required": [
+        "title",
+        "subtitle",
+        "description",
+        "text",
+        "speakers"
+      ],
+      "title": "deco-sites/vtexday/sections/Speakers.tsx@Props"
+    },
     "ZGVjby1zaXRlcy92dGV4ZGF5L2NvbXBvbmVudHMvdWkvV2hhdHNBcHAudHN4@Props": {
       "type": "object",
       "properties": {
@@ -11464,6 +11531,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1NwZWFrZXJzLnRzeA==": {
+      "title": "deco-sites/vtexday/sections/Speakers.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1NwZWFrZXJzLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/vtexday/sections/Speakers.tsx"
+          ],
+          "default": "deco-sites/vtexday/sections/Speakers.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1doYXRzQXBwLnRzeA==": {
       "title": "deco-sites/vtexday/sections/WhatsApp.tsx",
       "type": "object",
@@ -12500,6 +12588,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1NlYXJjaFJlc3VsdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1NwZWFrZXJzLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1doYXRzQXBwLnRzeA=="

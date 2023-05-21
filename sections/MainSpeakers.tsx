@@ -46,9 +46,9 @@ function MainSpeakers(props: Props) {
                   />
                 </div>
                 <div class="flex flex-col w-full items-center justify-center mt-[70px]">
-                  <h6 class="text-center text-black font-bold text-base uppercase mb-4">
+                  <h3 class="text-center text-black font-bold text-base uppercase mb-4">
                     {item.name}
-                  </h6>
+                  </h3>
                   <p class="text-xs text-center max-w-[70%] uppercase">
                     {item.bio}
                   </p>
@@ -71,9 +71,9 @@ function MainSpeakers(props: Props) {
                   />
                 </div>
                 <div class="flex flex-col w-full items-center justify-center mt-[70px]">
-                  <h6 class="text-center text-black font-bold text-base uppercase mb-4">
+                  <h3 class="text-center text-black font-bold text-base uppercase mb-4">
                     {item.name}
-                  </h6>
+                  </h3>
                   <p class="text-xs text-center max-w-[70%] uppercase">
                     {item.bio}
                   </p>

@@ -84,7 +84,7 @@ export default function InstagramComponent({
   minBanner,
 }: SectionProps<typeof loader>) {
   return (
-    <div class="w-full max-w-[1200px] mx-auto mb-12">
+    <div class="w-full max-w-[1080px] mx-auto mb-12">
       <div class="flex flex-col items-center justify-center gap-3 sm:flex-row sm:justify-start mb-5">
         <Image
           class="sm:w-[200px]"
@@ -108,7 +108,7 @@ export default function InstagramComponent({
             href={item.permalink}
             target="_blank"
             title="Visite nosso instagram"
-            class="rounded-lg overflow-hidden w-full max-w-[350px] sm:max-w-[285px] group"
+            class="rounded-lg overflow-hidden w-full max-w-[350px] sm:max-w-[255px] group"
           >
             {item.media_type === "IMAGE"
               ? (
