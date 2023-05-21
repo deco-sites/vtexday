@@ -40,8 +40,8 @@ function MainSpeakers(props: Props) {
                   <Image
                     class="w-[200px] h-[200px] object-cover max-w-[100%] mx-auto rounded-full"
                     src={item.perfil}
-                    width={300}
-                    height={300}
+                    width={200}
+                    height={200}
                     alt={item.name}
                   />
                 </div>

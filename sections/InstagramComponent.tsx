@@ -107,6 +107,7 @@ export default function InstagramComponent({
             key={item.id}
             href={item.permalink}
             target="_blank"
+            title="Visite nosso instagram"
             class="rounded-lg overflow-hidden w-full max-w-[350px] sm:max-w-[252px] group"
           >
             {item.media_type === "IMAGE"
