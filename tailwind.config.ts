@@ -35,6 +35,7 @@ export default {
       "v-gray": "#494949",
       "white": "#fff",
       "v-gray-1": "#494c4f",
+      "transparent": "transparent",
     },
     textColor: {
       "v-purple": "#2A063C",
@@ -42,6 +43,7 @@ export default {
       "v-gray": "#494949",
       "v-gray-1": "#494c4f",
       "white": "#fff",
+      "transparent": "transparent",
     },
     fontFamily: {
       sans: ["Roboto", "sans-serif"],

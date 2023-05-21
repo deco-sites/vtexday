@@ -215,22 +215,22 @@ export interface Miscellaneous {
   "--tab-radius": string;
 }
 
-export interface Font {
-  /**
-   * @default 'Albert Sans'
-   */
-  fontFamily: string;
-  /**
-   * @default @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&display=swap');
-   * \@format css
-   */
-  styleInnerHtml: string;
-}
+// export interface Font {
+//   /**
+//    * @default 'Albert Sans'
+//    */
+//   fontFamily: string;
+//   /**
+//    * @default @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&display=swap');
+//    * \@format css
+//    */
+//   styleInnerHtml: string;
+// }
 
 export interface Props {
   colors?: Colors & { optional?: OptionalColors };
   miscellaneous?: Miscellaneous;
-  fonts?: Font;
+  // fonts?: Font;
 }
 
 type Theme = Colors & OptionalColors & Miscellaneous;
@@ -315,11 +315,11 @@ const toVariables = (t: Theme): [string, string][] => {
 function Section({
   colors,
   miscellaneous,
-  fonts = {
-    fontFamily: "Albert Sans",
-    styleInnerHtml:
-      "@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&display=swap');",
-  },
+  // fonts = {
+  //   fontFamily: "Albert Sans",
+  //   styleInnerHtml:
+  //     "@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&display=swap');",
+  // },
 }: Props) {
   const id = useId();
   const theme = {
@@ -328,7 +328,7 @@ function Section({
     ...colors?.optional,
     ...miscellaneous,
   };
-  const variables = [...toVariables(theme), ["--font-family", fonts.fontFamily]]
+  const variables = [...toVariables(theme)]
     .map(([cssVar, value]) => `${cssVar}: ${value}`)
     .join(";");
 
@@ -336,10 +336,12 @@ function Section({
     <Head>
       <meta name="theme-color" content={theme["primary"]} />
       <meta name="msapplication-TileColor" content={theme["primary"]} />
-      <style
+      {
+        /* <style
         id={`__DESIGN_SYSTEM_FONT-${id}`}
         dangerouslySetInnerHTML={{ __html: fonts.styleInnerHtml }}
-      />
+      /> */
+      }
       <style
         id={`__DESIGN_SYSTEM_VARS-${id}`}
         dangerouslySetInnerHTML={{
