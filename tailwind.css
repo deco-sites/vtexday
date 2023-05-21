@@ -30,7 +30,8 @@
       top: 15vw;
       left: 0;
       width: 100%;
-      height: 920vh !important;
+      /* height: 920vh !important; */
+      height: 519vh!important;
       z-index: 40;
       pointer-events: none;
       overflow: hidden;
