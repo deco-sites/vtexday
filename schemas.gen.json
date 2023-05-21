@@ -59,6 +59,7 @@
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/AddToCartButton.tsx",
+              "./islands/Countdown.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderModals.tsx",
               "./islands/HeaderSearchbar.tsx",
@@ -93,6 +94,7 @@
               "deco-sites/std/sections/SEOPLP.tsx",
               "deco-sites/vtexday/sections/BannerGrid.tsx",
               "deco-sites/vtexday/sections/BannerPLP.tsx",
+              "deco-sites/vtexday/sections/CampaignTimer.tsx",
               "deco-sites/vtexday/sections/Carousel.tsx",
               "deco-sites/vtexday/sections/CookieConsent.tsx",
               "deco-sites/vtexday/sections/DesignSystem.tsx",
@@ -7406,6 +7408,59 @@
       "required": [],
       "title": "deco-sites/vtexday/components/ui/BannerPLP.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
+      "type": "string",
+      "format": "html",
+      "title": "HTML"
+    },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0NhbXBhaWduVGltZXIudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "targetDate": {
+          "type": "string",
+          "title": "Tempo para expirar",
+          "format": "date"
+        },
+        "text": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML",
+          "title": "Texto",
+          "default": "Time left for a campaign to end wth a link"
+        },
+        "labelButton": {
+          "type": "string",
+          "title": "Texto do botão",
+          "default": "button"
+        },
+        "actionButton": {
+          "type": "string",
+          "title": "Ação do botão",
+          "default": "#"
+        },
+        "variant": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "default"
+            },
+            {
+              "type": "string",
+              "const": "second"
+            }
+          ],
+          "type": "string",
+          "title": "Versão do bloco",
+          "default": "default"
+        }
+      },
+      "required": [
+        "targetDate",
+        "text",
+        "labelButton",
+        "actionButton",
+        "variant"
+      ],
+      "title": "deco-sites/vtexday/sections/CampaignTimer.tsx@Props"
+    },
     "ZGVjby1zaXRlcy92dGV4ZGF5L2NvbXBvbmVudHMvdWkvQmFubmVyQ2Fyb3VzZWwudHN4@Banner": {
       "type": "object",
       "properties": {
@@ -8344,11 +8399,6 @@
         "logo"
       ],
       "title": "deco-sites/vtexday/components/header/Header.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
-      "type": "string",
-      "format": "html",
-      "title": "HTML"
     },
     "ZGVjby1zaXRlcy92dGV4ZGF5L2NvbXBvbmVudHMvdWkvSGVyby50c3g=@Props": {
       "type": "object",
@@ -10581,6 +10631,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0NvdW50ZG93bi50c3g=": {
+      "title": "./islands/Countdown.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Countdown.tsx"
+          ],
+          "default": "./islands/Countdown.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g=": {
       "title": "./islands/HeaderButton.tsx",
       "type": "object",
@@ -11246,6 +11312,27 @@
             "deco-sites/vtexday/sections/BannerPLP.tsx"
           ],
           "default": "deco-sites/vtexday/sections/BannerPLP.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0NhbXBhaWduVGltZXIudHN4": {
+      "title": "deco-sites/vtexday/sections/CampaignTimer.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0NhbXBhaWduVGltZXIudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/vtexday/sections/CampaignTimer.tsx"
+          ],
+          "default": "deco-sites/vtexday/sections/CampaignTimer.tsx"
         }
       }
     },
@@ -12429,6 +12516,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0FkZFRvQ2FydEJ1dHRvbi50c3g="
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvdW50ZG93bi50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g="
         },
         {
@@ -12553,6 +12643,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0Jhbm5lclBMUC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0NhbXBhaWduVGltZXIudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0Nhcm91c2VsLnRzeA=="

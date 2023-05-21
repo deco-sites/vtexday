@@ -59,7 +59,7 @@ function Footer({ sections = [] }: Props) {
   return (
     <footer class="w-full bg-v-purple-3 flex flex-col divide-y divide-primary-content">
       <div>
-        <div class="container w-full flex flex-col divide-y divide-primary-content">
+        <div class="container max-w-[1080px] w-full flex flex-col divide-y divide-primary-content">
           <FooterContainer>
             <Newsletter />
           </FooterContainer>
@@ -121,9 +121,9 @@ function Footer({ sections = [] }: Props) {
       </div>
 
       <div>
-        <div class="container w-full">
+        <div class="container  max-w-[1080px] w-full">
           <FooterContainer class="flex justify-between w-full">
-            <span class="flex items-center gap-1 text-primary-content">
+            <span class="flex items-center gap-1 text-white">
               Powered by{" "}
               <a
                 href="https://www.deco.cx"
@@ -142,7 +142,7 @@ function Footer({ sections = [] }: Props) {
                   aria-label="Instagram logo"
                 >
                   <Icon
-                    class="text-primary-content"
+                    class="text-white"
                     width={32}
                     height={32}
                     id="Instagram"
@@ -158,7 +158,7 @@ function Footer({ sections = [] }: Props) {
                   aria-label="Discord logo"
                 >
                   <Icon
-                    class="text-primary-content"
+                    class="text-white"
                     width={32}
                     height={32}
                     id="Discord"
