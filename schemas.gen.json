@@ -102,6 +102,7 @@
               "deco-sites/vtexday/sections/Hero.tsx",
               "deco-sites/vtexday/sections/Highlights.tsx",
               "deco-sites/vtexday/sections/LinkTree.tsx",
+              "deco-sites/vtexday/sections/MainSpeakers.tsx",
               "deco-sites/vtexday/sections/ProductDetails.tsx",
               "deco-sites/vtexday/sections/ProductShelf.tsx",
               "deco-sites/vtexday/sections/SearchResult.tsx",
@@ -8533,6 +8534,75 @@
       "required": [],
       "title": "deco-sites/vtexday/components/ui/LinkTree.tsx@Props"
     },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL01haW5TcGVha2Vycy50c3g=@Perfil": {
+      "type": "object",
+      "properties": {
+        "perfil": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Perfil"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "bio": {
+          "type": "string",
+          "title": "Bio"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Description"
+        }
+      },
+      "required": [
+        "perfil",
+        "name",
+        "bio"
+      ],
+      "title": "Perfil"
+    },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL01haW5TcGVha2Vycy50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "subtitle": {
+          "type": "string",
+          "title": "Subtitle"
+        },
+        "text": {
+          "type": "string",
+          "title": "Text"
+        },
+        "mainSpeakers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL01haW5TcGVha2Vycy50c3g=@Perfil"
+          },
+          "title": "Main Speakers"
+        },
+        "speakers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL01haW5TcGVha2Vycy50c3g=@Perfil"
+          },
+          "title": "Speakers"
+        }
+      },
+      "required": [
+        "title",
+        "subtitle",
+        "text",
+        "mainSpeakers",
+        "speakers"
+      ],
+      "title": "deco-sites/vtexday/sections/MainSpeakers.tsx@Props"
+    },
     "ZGVjby1zaXRlcy92dGV4ZGF5L2NvbXBvbmVudHMvcHJvZHVjdC9Qcm9kdWN0RGV0YWlscy50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -8846,7 +8916,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -8962,7 +9036,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -8980,13 +9054,13 @@
           ]
         }
       ],
-      "title": "95abd76f92dd138f258080286726977e|WorkflowRef"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -11245,6 +11319,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL01haW5TcGVha2Vycy50c3g=": {
+      "title": "deco-sites/vtexday/sections/MainSpeakers.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL01haW5TcGVha2Vycy50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/vtexday/sections/MainSpeakers.tsx"
+          ],
+          "default": "deco-sites/vtexday/sections/MainSpeakers.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1Byb2R1Y3REZXRhaWxzLnRzeA==": {
       "title": "deco-sites/vtexday/sections/ProductDetails.tsx",
       "type": "object",
@@ -12329,6 +12424,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL0xpbmtUcmVlLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL01haW5TcGVha2Vycy50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy92dGV4ZGF5L3NlY3Rpb25zL1Byb2R1Y3REZXRhaWxzLnRzeA=="
