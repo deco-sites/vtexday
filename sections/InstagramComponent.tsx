@@ -84,7 +84,7 @@ export default function InstagramComponent({
   minBanner,
 }: SectionProps<typeof loader>) {
   return (
-    <div class="w-full max-w-[1080px] mx-auto mb-12">
+    <div class="w-full max-w-[1080px] mx-auto mb-12 section-nav" id="Imprensa">
       <div class="flex flex-col items-center justify-center gap-3 sm:flex-row sm:justify-start mb-5">
         <Image
           class="sm:w-[200px]"

@@ -8,6 +8,7 @@ import MenuMobile from "$store/islands/MenuMobile.tsx";
 export interface NavItem {
   label: string;
   href: string;
+  targetSection?: string;
   children?: Array<{
     label: string;
     href: string;

@@ -19,7 +19,7 @@ export interface Props {
 function MainSpeakers(props: Props) {
   const { mainSpeakers = [], speakers = [] } = props;
   return (
-    <div class="w-full">
+    <div class="w-full section-nav" id="MainSpeakers">
       <div class="px-[0.625rem] pt-[3.125rem] pb-[0.625rem] flex flex-col">
         <div class="mb-5">
           <h2 class="font-sans text-center uppercase  flex flex-col text-[2rem]">

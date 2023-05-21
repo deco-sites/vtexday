@@ -8246,6 +8246,13 @@
           "type": "string",
           "title": "Href"
         },
+        "targetSection": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Target Section"
+        },
         "children": {
           "type": "array",
           "items": {
